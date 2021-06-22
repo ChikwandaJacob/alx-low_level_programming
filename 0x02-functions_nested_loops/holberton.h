@@ -3,17 +3,11 @@
 
 /**
  * print_alphabet - prints the alphabet
+ * @void: takes nothing
  *
  * Return: Returns 0 Success
  */
-void print_alphabet(void)
-{
-char a;
-for (a = 'a'; a <= 'z'; a++)
-_putchar(a);
-_putchar('\n');
-}
-
+void print_alphabet(void);
 /**
  * _putchar - writes the character c to stdout
  * @c: The character to print

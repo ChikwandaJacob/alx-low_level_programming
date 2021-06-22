@@ -12,17 +12,3 @@ int _putchar(char c)
 {
 	return (write(1, &c, 1));
 }
-
-/**
- * print_alphabet - prints the alphabet
- *
- * Return: this function returns nothing
- */
-void print_alphabet(void)
-{
-char a;
-for (a = 'a'; a <= 'z'; a++)
-{
-_putchar(a);
-}
-}

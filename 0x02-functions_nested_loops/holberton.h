@@ -6,7 +6,13 @@
  *
  * Return: Returns 0 Success
  */
-void print_alphabet(void);
+void print_alphabet(void)
+{
+char a;
+for (a = 'a'; a <= 'z'; a++)
+putchar(a);
+putchar('\n');
+}
 
 /**
  * _putchar - writes the character c to stdout

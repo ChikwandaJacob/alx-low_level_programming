@@ -1,5 +1,5 @@
-#ifndef _HOLBERTON_H_INCLUDED
-#define _HOLBERTON_H_INCLUDED
+#ifndef _HOLBERTON_H
+#define _HOLBERTON_H
 #include <unistd.h>
 
 /**

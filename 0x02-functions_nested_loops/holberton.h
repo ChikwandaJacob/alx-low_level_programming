@@ -3,6 +3,15 @@
 
 /**
  * print_alphabet_x10 - prints the alphabet 10 times.
+ * @c: takes a single charcater
+ * 
+ * Return: Returns 1 if character is lower case.
+ * Otherwise the function returns 0.
+ */
+int _islower(int c);
+
+/**
+ * print_alphabet_x10 - prints the alphabet 10 times.
  * @void: takes nothing
  * 
  * Return: Returns nothing.

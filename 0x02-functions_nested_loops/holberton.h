@@ -2,6 +2,14 @@
 #define HOLBERTON_H
 
 /**
+ * print_last_digit - gets last value of a given number
+ * @n : number to be determined.
+ *
+ * Return: returns last value
+ */
+int print_last_digit(int n);
+
+/**
  * _abs - computes the absolute value of a given number
  * @n : number with sign to be determined.
  *

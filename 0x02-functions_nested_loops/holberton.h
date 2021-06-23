@@ -2,6 +2,14 @@
 #define HOLBERTON_H
 
 /**
+ * print_to_98 - gets last value of a given number
+ * @n : first number
+ *
+ * Return: returns all natural numbers
+ */
+void print_to_98(int n);
+
+/**
  * times_table - gets last value of a given number
  * @a : first number.
  * @b : second number

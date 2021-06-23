@@ -7,18 +7,16 @@
  * Return: returns abs value
  */
 
-int _abs(int n)
+void print_to_98(int n)
 {
-if (n > 0)
+int i;
+for (i = 0; i <= n; i++)
 {
-return (n * 1);
+printf("%d", i);
+if (i < n)
+{
+putchar(',');
+putchar(' ');
 }
-else if (n == 0)
-{
-return (n * 0);
-}
-else
-{
-return (n * -1);
 }
 }

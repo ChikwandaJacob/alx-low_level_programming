@@ -18,8 +18,7 @@ int answer = i * j;
 printf("%d", answer);
 if (j < 9)
 {
-putchar(',');
-putchar(' ');
+puts(",  ");
 }
 }
 putchar('\n');

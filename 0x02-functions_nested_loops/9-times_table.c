@@ -18,10 +18,10 @@ int answer = i * j;
 printf("%d", answer);
 if (j < 9)
 {
-_putchar(',');
-_putchar(' ');
+putchar(',');
+putchar(' ');
 }
 }
-_putchar('\n');
+putchar('\n');
 }
 }

@@ -2,6 +2,14 @@
 #define HOLBERTON_H
 
 /**
+ * jack_buar - gets last value of a given number
+ * @void : first number
+ *
+ * Return: returns all natural numbers
+ */
+void jack_bauer(void);
+
+/**
  * print_to_98 - gets last value of a given number
  * @n : first number
  *

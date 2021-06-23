@@ -19,6 +19,8 @@ printf("%d", answer);
 if (j < 9)
 {
 printf(", ");
+if (answer < 10)
+putchar(' ');
 }
 }
 putchar('\n');

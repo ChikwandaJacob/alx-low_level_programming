@@ -1,5 +1,5 @@
 #include "holberton.h"
-
+#include <stdio.h>
 /**
  * times_table - computes absolute value of a number
  * @void : is the number to be determined.
@@ -15,7 +15,7 @@ for (i = 0; i < 10; i++)
 for (j = 0; j < 10; j++)
 {
 int answer = i * j;
-_putchar(answer);
+ printf("%d", answer);
 if (j < 9)
 {
 _putchar(',');

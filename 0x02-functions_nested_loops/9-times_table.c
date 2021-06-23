@@ -23,6 +23,5 @@ if (answer < 10)
 putchar(' ');
 }
 }
-putchar('\n');
 }
 }

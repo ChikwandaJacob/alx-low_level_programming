@@ -3,6 +3,15 @@
 
 /**
  * times_table - gets last value of a given number
+ * @a : first number.
+ * @b : second number
+ *
+ * Return: returns sum of a and b
+ */
+int add(int a, int b);
+
+/**
+ * times_table - gets last value of a given number
  * @void : number to be determined.
  *
  * Return: returns last value

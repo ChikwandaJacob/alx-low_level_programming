@@ -20,6 +20,7 @@ if (j < 9)
 {
 putchar(',');
 putchar(' ');
+if (answer < 10)
 putchar(' ');
 }
 }

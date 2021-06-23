@@ -12,5 +12,5 @@ int print_last_digit(int n)
 {
 char c[50];
 sprintf(c, "%d", n);
-return (c[strlen(c) - 1] - '0');
+return (c[strlen(c) - 1]);
 }

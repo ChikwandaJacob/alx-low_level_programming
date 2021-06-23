@@ -10,14 +10,14 @@
 int _isalpha(int c)
 {
 char sletter, bletter;
-int is_alpha = false;
+int is_alpha = 0;
 for (sletter = 'a'; sletter <= 'z'; sletter++)
 if (sletter == c)
-is_alpha = true;
+is_alpha = 1;
 for (bletter = 'A'; bletter <= 'Z'; bletter++)
 if (bletter == c)
-is_alpha = true;
-if (is_alpha)
+is_alpha = 1;
+if (is_alpha == 1)
 return (1);
 else
 return (0);

@@ -2,6 +2,14 @@
 #define HOLBERTON_H
 
 /**
+ * print_alphabet_x10 - prints the alphabet 10 times.
+ * @void: takes nothing
+ * 
+ * Return: Returns nothing.
+ */
+void print_alphabet_x10(void);
+
+/**
  * print_alphabet - prints the alphabet
  * @void: takes nothing
  *

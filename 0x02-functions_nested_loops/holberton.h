@@ -2,6 +2,14 @@
 #define HOLBERTON_H
 
 /**
+ * _abs - computes the absolute value of a given number
+ * @n : number with sign to be determined.
+ *
+ * Return: returns abs value
+ */
+int _abs(int n);
+
+/**
  * print_sign - determines the sign of a number
  * @n : number with sign to be determined.
  *

@@ -10,7 +10,7 @@
 
 int print_last_digit(int n)
 {
-char c[50];
+char c[50], last_digit;
 sprintf(c, "%d", n);
-return (c[strlen(c) - 1]);
+return (c[strlen(c)-1] - '0');
 }

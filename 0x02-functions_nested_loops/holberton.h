@@ -2,6 +2,14 @@
 #define HOLBERTON_H
 
 /**
+ * print_sign - determines the sign of a number
+ * @n : number with sign to be determined.
+ *
+ * Return: returns; 1 if number is positive; 0 if number is zero; -1 if number is negative
+ */
+int print_sign(int n);
+
+/**
  * _islower - determines if a character is lowercase or not
  * @c: takes a single charcater
  * 

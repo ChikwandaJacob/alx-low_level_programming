@@ -2,6 +2,13 @@
 #define HOLBERTON_H
 
 /**
+ * times_table - gets last value of a given number
+ * @void : number to be determined.
+ *
+ * Return: returns last value
+ */
+void times_table(void);
+/**
  * print_last_digit - gets last value of a given number
  * @n : number to be determined.
  *

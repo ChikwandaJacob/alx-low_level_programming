@@ -2,13 +2,22 @@
 #define HOLBERTON_H
 
 /**
- * print_alphabet_x10 - prints the alphabet 10 times.
+ * _islower - determines if a character is lowercase or not
  * @c: takes a single charcater
  * 
  * Return: Returns 1 if character is lower case.
  * Otherwise the function returns 0.
  */
 int _islower(int c);
+
+/**
+ * _isalpha - determines if a charcater is part of the alphabet.
+ * @c: takes a single charcater
+ * 
+ * Return: Returns 1 if character is part of alphabet.
+ * Otherwise the function returns 0.
+ */
+int _isalpha(int c);
 
 /**
  * print_alphabet_x10 - prints the alphabet 10 times.

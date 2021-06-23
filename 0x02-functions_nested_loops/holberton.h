@@ -1,5 +1,5 @@
-#ifndef _HOLBERTON_H
-#define _HOLBERTON_H
+#ifndef HOLBERTON_H
+#define HOLBERTON_H
 
 /**
  * print_alphabet - prints the alphabet

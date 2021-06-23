@@ -1,11 +1,13 @@
 #include "holberton.h"
 /**
- * main - check the code for ALX School students.
- *
- * Return: Always 0.
- */
-int main(void)
+* print_alphabet - prints the alphabet
+*
+* Return: returns nothing.
+*/
+void print_alphabet(void)
 {
-print_alphabet();
-return (0);
+char a;
+for (a = 'a'; a <= 'z'; a++)
+putchar(a);
+putchar('\n');
 }

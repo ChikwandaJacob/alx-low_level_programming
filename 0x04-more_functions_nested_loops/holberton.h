@@ -1,5 +1,5 @@
-#ifndef HOLBERTON_H
-#define HOLBERTON_H
+#ifndef _HOLBERTON_H
+#define _HOLBERTON_H
 
 /**
  * _putchar - prints out a character
@@ -15,7 +15,7 @@ int _putchar(char c);
  *
  * Return: Returns 1 on sucess. Otherwise 0.
  */
-int _isupper(char c);
+int _isupper(int c);
 
 /**
  * _isdigit - checks if character is a digit
@@ -89,3 +89,5 @@ void print_square(int size);
  * Return: returns nothing
  */
 void print_triangle(int size);
+
+#endif

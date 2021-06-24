@@ -6,15 +6,9 @@
  *
  * Return: Returns 1 on sucess. Otherwise 0.
  */
-int _isupper(char c)
+int _isupper(int c)
 {
-int is_alpha = 0;
-char letter;
-for (letter = 'A'; letter <= 'Z'; letter++)
-if (c == letter)
-is_alpha = 1;
-if (is_alpha == 1)
-return (1);
-else
-return (0);
+	if (c >= 65 && c <= 90)
+		return (1);
+	return (0);
 }

@@ -8,8 +8,8 @@
  */
 void addSeparation(int i)
 {
-if (i < 100)
-printf(" ");
+	if (i < 100)
+		printf(" ");
 }
 
 /**
@@ -20,29 +20,31 @@ printf(" ");
  */
 int main(void)
 {
-int i;
-for (i = 1; i <= 100; i++)
-{
-if (i % 3 == 0 && i % 5 == 0)
-{
-printf("%s", "FizzBuzz");
-addSeparation(i);
-continue;
-}
-if (i % 3 == 0)
-{
-printf("%s", "Fizz");
-addSeparation(i);
-continue;
-}
-if (i % 5 == 0)
-{
-printf("%s", "Buzz");
-addSeparation(i);
-continue;
-}
-printf("%d", i);
-addSeparation(i);
-}
-return (0);
+	int i;
+
+	for (i = 1; i <= 100; i++)
+	{
+		if (i % 3 == 0 && i % 5 == 0)
+		{
+			printf("%s", "FizzBuzz");
+			addSeparation(i);
+			continue;
+		}
+		if (i % 3 == 0)
+		{
+			printf("%s", "Fizz");
+			addSeparation(i);
+			continue;
+		}
+		if (i % 5 == 0)
+		{
+			printf("%s", "Buzz");
+			addSeparation(i);
+			continue;
+		}
+		printf("%d", i);
+		addSeparation(i);
+	}
+	putchar('\n');
+	return (0);
 }

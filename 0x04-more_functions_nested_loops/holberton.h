@@ -2,6 +2,14 @@
 #define _HOLBERTON_H
 
 /**
+ * print_number - prints an integer.
+ * @n: number to be printed
+ *
+ * Return: returns nothing.
+ */
+void print_number(int n);
+
+/**
  * _putchar - prints out a character
  * @c: The character to print
  *

@@ -9,7 +9,7 @@
 void addSeparation(int i)
 {
 if (i < 100)
-printf(", ");
+printf(" ");
 }
 
 /**

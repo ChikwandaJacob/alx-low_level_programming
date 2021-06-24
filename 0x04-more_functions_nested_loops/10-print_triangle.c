@@ -10,7 +10,7 @@ void print_triangle(int size)
 {
 int i, j, last;
 if (size < 0)
-putchar('\n');
+_putchar('\n');
 else
 {
 for (i = 0; i < size; i++)
@@ -21,10 +21,10 @@ for (j = 0; j < size; j++)
 if (j < last)
 putchar(' ');
 else
-putchar('#');
+_putchar('#');
 }
-putchar('\n');
+_putchar('\n');
 }
-putchar('\n');
+_putchar('\n');
 }
 }

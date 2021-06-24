@@ -6,7 +6,7 @@
  *
  * Return: Returns 1 on sucess. Otherwise 0.
  */
-int _isupper(int c)
+int _isupper(char c)
 {
 int is_alpha = 0;
 char letter;

@@ -15,7 +15,7 @@ int _putchar(char c);
  *
  * Return: Returns 1 on sucess. Otherwise 0.
  */
-int _isupper(int c);
+int _isupper(char c);
 
 /**
  * _isdigit - checks if character is a digit

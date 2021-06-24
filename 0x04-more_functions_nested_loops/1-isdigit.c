@@ -8,12 +8,7 @@
  */
 int _isdigit(int c)
 {
-int is_digit = 0, i;
-for (i = 0; i < 10; i++)
-if (i == c)
-is_digit = 1;
-if (is_digit == 1)
-return (1);
-else
-return (0);
+	if (c >= 0 || c <= 9)
+		return (1);
+	return (0);
 }

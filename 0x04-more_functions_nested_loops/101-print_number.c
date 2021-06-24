@@ -26,6 +26,7 @@ int determineDivider(int n)
 void print_number(int n)
 {
 	int divider = 100;
+
 	if (n < 0)
 	{
 		n = n * -1;

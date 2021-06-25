@@ -9,6 +9,7 @@
  */
 long biggestPrimeFactor(long n)
 {
+	int i;
 	long assumption1, assumption2, assumption3;
 
 	while (n % 2 == 0)
@@ -16,7 +17,7 @@ long biggestPrimeFactor(long n)
 		assumption1 = 2;
 		n = n / 2;
 	}
-	for (int i = 3; i <= sqrt(n); i = i + 2)
+	for (i = 3; i <= sqrt(n); i = i + 2)
 	{
 		while (n % i == 0)
 		{

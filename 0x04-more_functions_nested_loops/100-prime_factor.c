@@ -9,18 +9,32 @@
  */
 long biggestPrimeFactor(long n)
 {
-	long divisor, prime_number;
+	long assumption1, assumption2, assumption3;
 
-	while (n != 1)
+	while (n % 2 == 0)
 	{
-		if (n % divisor == 0)
-		{
-			n = n / divisor;
-			prime_number = divisor;
-		}
-		divisor++;
+		assumption1 = 2;
+		n = n / 2;
 	}
-	return (prime_number);
+	for (int i = 3; i <= sqrt(n); i = i + 2)
+	{
+		while (n % i == 0)
+		{
+			assumption2 = i;
+			n = n / i;
+		}
+	}
+
+	if (n > 2)
+		assumption3 = n;
+	if (assumption1 < assumption2)
+		if (assumption2 > assumption3)
+			return (assumption2);
+		else
+			return (assumption3);
+	else
+		return (assumption1);
+	return (0);
 }
 
 /**

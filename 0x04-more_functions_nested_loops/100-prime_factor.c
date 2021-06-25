@@ -2,32 +2,25 @@
 # include <math.h>
 
 /**
- * primeFactors - prints prime factors
+ * biggestPrimeFactor - prints prime factors
  * @n: number whose prime factors are to printed.
  *
- * Return: returns nothing.
+ * Return: returns biggest prime factor.
  */
-void primeFactors(long n)
+long biggestPrimeFactor(long n)
 {
-	long i;
+	long divisor, prime_number;
 
-	while (n % 2 == 0)
+	while (n != 1)
 	{
-		printf("%d", 2);
-		n = n / 2;
-	}
-
-	for (i = 3; i <= sqrt(n); i = i + 2)
-	{
-		while (n % i == 0)
+	        if (n % divisor == 0)
 		{
-			printf("%ld", i);
-			n = n / i;
+			n = n / divisor;
+			prime_number = divisor;
 		}
+		divisor++;
 	}
-
-	if (n > 2)
-		printf("%ld", n);
+	return prime_number;
 }
 
 /**
@@ -38,7 +31,6 @@ void primeFactors(long n)
  */
 int main(void)
 {
-	primeFactors(612852475143);
-	putchar('\n');
+	printf("%ld\n", biggestPrimeFactor(612852475143));
 	return (0);
 }

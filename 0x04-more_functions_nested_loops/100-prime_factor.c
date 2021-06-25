@@ -13,14 +13,14 @@ long biggestPrimeFactor(long n)
 
 	while (n != 1)
 	{
-	        if (n % divisor == 0)
+		if (n % divisor == 0)
 		{
 			n = n / divisor;
 			prime_number = divisor;
 		}
 		divisor++;
 	}
-	return prime_number;
+	return (prime_number);
 }
 
 /**

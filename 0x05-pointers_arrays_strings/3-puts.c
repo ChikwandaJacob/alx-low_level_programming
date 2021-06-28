@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <string.h>
 
 /**
  * _puts - prints a string, followed by a new line.
@@ -13,7 +12,7 @@ void _puts(char *str)
 	i = -1;
 	do {
 		i++;
-		_putchar(_str[i]);
+		_putchar(str[i]);
 		if (str[i] == '\0')
 			_putchar('\n');
 	} while (str[i] != '\0');

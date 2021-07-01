@@ -28,29 +28,17 @@ char *cap_string(char *str)
 					str[i] = (char)(temp);
 					capitalize = 0;
 				}
-			        i++;
+				i++;
 				continue;
 			}
 			else
 			{
-				c = str[i+1];
+				c = str[i + 1];
 				if (str[i] == ' ' && (c >= 'a' && c <= 'z'))
 					capitalize = 1;
-			        if (str[i] == '\n' || str[i] == '\t')
+				if (str[i] == '\n' || str[i] == '\t')
 					capitalize = 1;
 				if (str[i] == '.' && (c >= 'a' && c <= 'z'))
-					capitalize = 1;
-				if (str[i] == ',' && (c >= 'a' && c <= 'z'))
-					capitalize = 1;
-				if (str[i] == ';' && (c >= 'a' && c <= 'z'))
-					capitalize = 1;
-				if (str[i] == '{' && (c >= 'a' && c <= 'z'))
-					capitalize = 1;
-				if (str[i] == '}' && (c >= 'a' && c <= 'z'))
-					capitalize = 1;
-				if (str[i] == '(' && (c >= 'a' && c <= 'z'))
-					capitalize = 1;
-				if (str[i] == ')' && (c >= 'a' && c <= 'z'))
 					capitalize = 1;
 				i++;
 				continue;

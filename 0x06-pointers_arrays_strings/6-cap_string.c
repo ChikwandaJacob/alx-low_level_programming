@@ -36,14 +36,21 @@ char *cap_string(char *str)
 				c = str[i+1];
 				if (str[i] == ' ' && (c >= 'a' && c <= 'z'))
 					capitalize = 1;
-				if (str[i] == '\t')
-				{
-					capitalize = 1;
-					str[i] = ' ';
-				}
-				if (str[i] == '\n')
+			        if (str[i] == '\n' || str[i] == '\t')
 					capitalize = 1;
 				if (str[i] == '.' && (c >= 'a' && c <= 'z'))
+					capitalize = 1;
+				if (str[i] == ',' && (c >= 'a' && c <= 'z'))
+					capitalize = 1;
+				if (str[i] == ';' && (c >= 'a' && c <= 'z'))
+					capitalize = 1;
+				if (str[i] == '{' && (c >= 'a' && c <= 'z'))
+					capitalize = 1;
+				if (str[i] == '}' && (c >= 'a' && c <= 'z'))
+					capitalize = 1;
+				if (str[i] == '(' && (c >= 'a' && c <= 'z'))
+					capitalize = 1;
+				if (str[i] == ')' && (c >= 'a' && c <= 'z'))
 					capitalize = 1;
 				i++;
 				continue;

@@ -36,27 +36,11 @@ char *cap_string(char *str)
 				c = str[i + 1];
 				if (str[i] == ' ' && (c >= 'a' && c <= 'z'))
 					capitalize = 1;
-				if (str[i] == '\n' || str[i] == '\t')
+				if (str[i] == '\n' && (c >= 'a' && c <= 'z'))
+					capitalize = 1;
+				if (str[i] == '\t' && (c >= 'a' && c <= 'z'))
 					capitalize = 1;
 				if (str[i] == '.' && (c >= 'a' && c <= 'z'))
-					capitalize = 1;
-				if (str[i] == ';' && (c >= 'a' && c <= 'z'))
-					capitalize = 1;
-				if (str[i] == ',' && (c >= 'a' && c <= 'z'))
-					capitalize = 1;
-				if (str[i] == '}' && (c >= 'a' && c <= 'z'))
-					capitalize = 1;
-				if (str[i] == '{' && (c >= 'a' && c <= 'z'))
-					capitalize = 1;
-				if (str[i] == '(' && (c >= 'a' && c <= 'z'))
-					capitalize = 1;
-				if (str[i] == ')' && (c >= 'a' && c <= 'z'))
-					capitalize = 1;
-				if (str[i] == '"' && (c >= 'a' && c <= 'z'))
-					capitalize = 1;
-				if (str[i] == '?' && (c >= 'a' && c <= 'z'))
-					capitalize = 1;
-				if (str[i] == '!' && (c >= 'a' && c <= 'z'))
 					capitalize = 1;
 				i++;
 				continue;

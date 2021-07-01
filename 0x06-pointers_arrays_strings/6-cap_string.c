@@ -7,45 +7,28 @@
  */
 char *cap_string(char *str)
 {
-	const int A_a_diff = 32;
-	int i = 0, temp, capitalize = 0;
-	char c;
+	int index = 0;
 
-	while (str[i] != '\0')
+	while (str[index] != '\0')
 	{
-		temp = (int)(char)(str[i]) - A_a_diff;
-		if (str[i] >= 'A' && str[i] <= 'Z')
-		{
-			i++;
-			continue;
-		}
-		else
-		{
-			if (str[i] >= 'a' && str[i] <= 'z')
-			{
-				if (capitalize == 1)
-				{
-					str[i] = (char)(temp);
-					capitalize = 0;
-				}
-				i++;
-				continue;
-			}
-			else
-			{
-				c = str[i + 1];
-				if (str[i] == ' ' && (c >= 'a' && c <= 'z'))
-					capitalize = 1;
-				if (str[i] == '\n' && (c >= 'a' && c <= 'z'))
-					capitalize = 1;
-				if (str[i] == '\t' && (c >= 'a' && c <= 'z'))
-					capitalize = 1;
-				if (str[i] == '.' && (c >= 'a' && c <= 'z'))
-					capitalize = 1;
-				i++;
-				continue;
-			}
-		}
+		while (!(str[index] >= 'a' && str[index] <= 'z'))
+			index++;
+		if (str[index - 1] == ' ' ||
+			str[index - 1] == '\t' ||
+			str[index - 1] == '\n' ||
+			str[index - 1] == ',' ||
+			str[index - 1] == ';' ||
+			str[index - 1] == '.' ||
+			str[index - 1] == '!' ||
+			str[index - 1] == '?' ||
+			str[index - 1] == '"' ||
+			str[index - 1] == '(' ||
+			str[index - 1] == ')' ||
+			str[index - 1] == '{' ||
+			str[index - 1] == '}' ||
+			index == 0)
+				str[index] -= 32;
+		index++;
 	}
 	return (str);
 }

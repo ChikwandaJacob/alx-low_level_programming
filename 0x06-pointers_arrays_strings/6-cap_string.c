@@ -54,6 +54,10 @@ char *cap_string(char *str)
 					capitalize = 1;
 				if (str[i] == '"' && (c >= 'a' && c <= 'z'))
 					capitalize = 1;
+				if (str[i] == '?' && (c >= 'a' && c <= 'z'))
+					capitalize = 1;
+				if (str[i] == '!' && (c >= 'a' && c <= 'z'))
+					capitalize = 1;
 				i++;
 				continue;
 			}

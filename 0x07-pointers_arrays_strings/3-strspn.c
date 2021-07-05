@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _strspm - gets the length of a prefix substring.
+ * _strspn - gets the length of a prefix substring.
  * @s: string
  * @accept: string to be counted
  * Return: the number of bytes in the initial segment of s
@@ -12,7 +12,7 @@ unsigned int _strspn(char *s, char *accept)
 
 	while (s[j] != '\0')
 	{
-	        for (i = 0; accept[i] != '\0'; i++)
+		for (i = 0; accept[i] != '\0'; i++)
 		{
 			if (accept[i] == s[j])
 			{
@@ -20,9 +20,9 @@ unsigned int _strspn(char *s, char *accept)
 				break;
 			}
 			if (accept[i + 1] == '\0')
-				return counter;
+				return (counter);
 		}
 		j++;
 	}
-	return counter;
+	return (counter);
 }

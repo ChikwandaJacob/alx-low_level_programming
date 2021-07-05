@@ -12,14 +12,9 @@ unsigned int _strspn(char *s, char *accept)
 
         for (i = 0; s[i] != '\0'; i++)
 	{
-		if (counter != i)
-			break;
 		for (i2 = 0; accept[i2] != '\0'; i2++)
 			if (s[i] == accept[i2])
 				counter++;
 	}
-	if (counter > 0)
-		return (counter);
-	else
-		return (counter);
+	return counter;
 }

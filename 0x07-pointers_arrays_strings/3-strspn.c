@@ -18,5 +18,8 @@ unsigned int _strspn(char *s, char *accept)
 			if (s[i] == accept[i2])
 				counter++;
 	}
-	return counter;
+	if (counter > 0)
+		return (counter);
+	else
+		return (counter);
 }

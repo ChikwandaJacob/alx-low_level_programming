@@ -10,6 +10,8 @@
  */
 int main(int argc, char *argv[])
 {
+	/*To avoid unused parameter error cast argv to void*/
+	(void)argv;
 	printf("%d\n", argc);
 	return (0);
 }

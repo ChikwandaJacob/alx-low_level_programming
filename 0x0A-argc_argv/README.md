@@ -1,9 +1,9 @@
-#Argc & Argv
+# Argc & Argv
 
 This directories contains programs that demonstrate how we can make use of the 
 two arguments that are passed into the main function of a C program.
 
-##Programs in this project
+## Programs in this project
 
 Program name | Program Description
 ------------ | -------------------

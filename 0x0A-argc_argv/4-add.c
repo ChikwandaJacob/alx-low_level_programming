@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 	if (argc > 1)
 	{
 		sum = contains_digits(argv, argc);
-		if (sum > 1)
+		if (sum >= 0)
 			printf("%d\n", sum);
 		else
 		{
@@ -48,7 +48,7 @@ int contains_digits(char *argv[], int argc)
 		if (isdigit(*argv[i]))
 			sum += atoi(argv[i]);
 		else
-			return (1);
+			return (-1);
 	}
 	return (sum);
 }

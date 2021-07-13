@@ -61,10 +61,17 @@ void calculate_coins(int *money, int coins[], int *coin_count, int divider)
 
 	if (remainder > 9)
 	{
-		*money /= divider;
-		remainder %= 10;
+		while (remainder > 9)
+		{
+			*money += (remainder / 10);
+			remainder %= 10;
+		}
 	}
-
+	if (remainder < 10)
+	{
+		*money += (remainder / 2);
+		remainder %= 2;
+	}
 	while (s != remainder)
 	{
 		if (i == 4)

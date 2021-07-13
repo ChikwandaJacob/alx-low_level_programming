@@ -54,7 +54,7 @@ int contains_digits(char *argv[], int argc)
 			else
 				return (-1);
 		}
-	        sum += atoi(argv[i]);
+		sum += atoi(argv[i]);
 	}
 	return (sum);
 }

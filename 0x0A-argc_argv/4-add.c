@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
 #include "holberton.h"
@@ -41,14 +42,19 @@ int main(int argc, char *argv[])
  */
 int contains_digits(char *argv[], int argc)
 {
-	int i, sum = 0;
+	int i, j, sum = 0, length;
 
 	for (i = 1; i < argc; i++)
 	{
-		if (isdigit(*argv[i]))
-			sum += atoi(argv[i]);
-		else
-			return (-1);
+		length = strlen(argv[i]);
+		for (j = 0; j < length; j++)
+		{
+			if (isdigit(argv[i][j]))
+				continue;
+			else
+				return (-1);
+		}
+	        sum += atoi(argv[i]);
 	}
 	return (sum);
 }

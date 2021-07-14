@@ -13,13 +13,16 @@ char *_strdup(char *str)
 	int size, i;
 	char *ptr;
 
+	if (str == NULL)
+		return (NULL);
+
 	/*Determining entered length size*/
 	for (size = 0; str[size] != '\0'; size++)
 		;
 
 	ptr = (char *) malloc((size + 1) * sizeof(char));
 
-	if (ptr == NULL || str == NULL)
+	if (ptr == NULL)
 		return (NULL);
 
 	/*Copying content of @str into new array*/

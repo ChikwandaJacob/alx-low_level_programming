@@ -30,3 +30,6 @@ _To know more about the functions list above kindly read about them in there *fu
 1. Download whatever function you would love to use.
 2. Download the *holberton.h* file.
 3. Put the files downloaded in step 1 and 2 into your projects directory.
+4. Include the header file into your program.
+5. Compile the program like this : _gcc -Wall -pedantic -Werror -Wextra -std=gnu89 *your_program_name.c* *function_defintion_name.c* -o executable_file_name_
+6. Run your program like this: *./executable_file_name_*

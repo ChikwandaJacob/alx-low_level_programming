@@ -12,7 +12,7 @@ unsigned int _strlen(char *str)
 
 	for (size = 0; str[size] != '\0'; size++)
 		;
-	return (size);
+	return (size + 1);
 }
 
 /**
@@ -29,18 +29,21 @@ unsigned int _strlen(char *str)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr;
-	unsigned int size, i = 0, j = 0;
+	unsigned int size, i = 0, j = 0, s1_size, s2_size;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
-		s1 = "";
+		s2 = "";
 
-	if (n >= _strlen(s2))
-		n = _strlen(s2);
+	s1_size = _strlen(s1);
+	s2_size = _strlen(s2);
 
-	size = _strlen(s1) + n;
-	ptr = malloc((size + 1) * sizeof(char));
+	if (n >= s2_size)
+		n = s2_size;
+
+	size = s1_size + n;
+	ptr = malloc((size) * sizeof(char));
 
 	if (ptr == NULL)
 		return (NULL);

@@ -15,7 +15,14 @@ struct dog
 	char *name, *owner;
 	float age;
 };
+
+/*Defines an alias of dog structure*/
+typedef struct dog dog_t;
+
+/*Prototype for function to print dog structure contents*/
 void print_dog(struct dog *d);
+
+/*Prototype for function to initalize all the members of dog struct*/
 void init_dog(struct dog *d, char *name, float age, char *owner);
 
 #endif

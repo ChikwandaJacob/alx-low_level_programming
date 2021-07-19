@@ -25,4 +25,7 @@ void print_dog(struct dog *d);
 /*Prototype for function to initalize all the members of dog struct*/
 void init_dog(struct dog *d, char *name, float age, char *owner);
 
+/*Prototype for function to create a new dog*/
+dog_t *new_dog(char *name, float age, char *owner);
+
 #endif

@@ -28,4 +28,7 @@ void init_dog(struct dog *d, char *name, float age, char *owner);
 /*Prototype for function to create a new dog*/
 dog_t *new_dog(char *name, float age, char *owner);
 
+/*Prototype for function to free memory allocated to dog struct*/
+void free_dog(dog_t *d);
+
 #endif

@@ -44,8 +44,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			{
 				if (s != NULL)
 					printf("%s%s", str, s);
-				else
-					printf("%s", str);
 			}
 		}
 

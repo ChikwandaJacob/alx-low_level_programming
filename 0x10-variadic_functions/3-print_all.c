@@ -13,7 +13,7 @@ char *is_null(char *s)
 {
 	while (s != NULL)
 		return (s);
-	return ("(nill)");
+	return ("(nil)");
 }
 
 /**

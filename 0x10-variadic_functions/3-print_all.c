@@ -29,43 +29,41 @@ char *is_null(char *s)
 void print_all(const char * const format, ...)
 {
 	const char *s = format, *s1 = format;
-	int put_separator = 1, str_len = 0, i = 0;
-
+	int str_len = 0, i = 0;
 	va_list list;
 
 	va_start(list, format);
 
-	while (*s && s != NULL)
+	if (format != NULL)
 	{
-		str_len++;
-		s++;
-	}
-	while (i < str_len && format != NULL)
-	{
-		switch (*s1)
+		while (*s && s != NULL)
 		{
-		case 'c':
-			printf("%c", (char)va_arg(list, int));
-			break;
-		case 'i':
-			printf("%d", va_arg(list, int));
-			break;
-		case 's':
-			printf("%s", is_null(va_arg(list, char *)));
-			break;
-		case 'f':
-			printf("%f", va_arg(list, double));
-			break;
-		default:
-			put_separator = 0;
+			str_len++;
+			s++;
 		}
-
-		if (i < str_len - 1 && put_separator)
-			printf(", ");
-		put_separator = 1;
-		i++;
-		s1++;
+		while (i < str_len && format != NULL)
+		{
+			switch (*s1)
+			{
+			case 'c':
+				printf("%c", (char)va_arg(list, int));
+				break;
+			case 'i':
+				printf("%d", va_arg(list, int));
+				break;
+			case 's':
+				printf("%s", is_null(va_arg(list, char *)));
+				break;
+			case 'f':
+				printf("%f", va_arg(list, double));
+				break;
+			}
+			if (i < str_len - 1)
+				printf(", ");
+			i++;
+			s1++;
+		}
+		printf("\n");
+		va_end(list);
 	}
-	printf("\n");
-	va_end(list);
 }

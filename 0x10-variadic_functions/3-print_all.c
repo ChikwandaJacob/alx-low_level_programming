@@ -11,7 +11,7 @@
  */
 char *is_null(char *s)
 {
-	if (s != NULL)
+	while (s != NULL)
 		return (s);
 	return ("(nill)");
 }
@@ -29,21 +29,17 @@ char *is_null(char *s)
 void print_all(const char * const format, ...)
 {
 	const char *s = format, *s1 = format;
-	int str_len = 0, i = 0;
-	va_list list;
+	int put_separator = 1;
 
-	va_start(list, format);
+	va_list list;
 
 	if (format != NULL)
 	{
-		while (*s && s != NULL)
+		s1++;
+		va_start(list, format);
+		while (*s)
 		{
-			str_len++;
-			s++;
-		}
-		while (i < str_len && format != NULL)
-		{
-			switch (*s1)
+			switch (*s)
 			{
 			case 'c':
 				printf("%c", (char)va_arg(list, int));
@@ -57,10 +53,14 @@ void print_all(const char * const format, ...)
 			case 'f':
 				printf("%f", va_arg(list, double));
 				break;
+			default:
+				put_separator = 0;
 			}
-			if (i < str_len - 1)
+
+			if (put_separator && *s1)
 				printf(", ");
-			i++;
+			put_separator = 1;
+			s++;
 			s1++;
 		}
 		printf("\n");

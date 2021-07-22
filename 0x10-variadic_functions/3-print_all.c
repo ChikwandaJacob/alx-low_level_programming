@@ -29,13 +29,13 @@ char *is_null(char *s)
 void print_all(const char * const format, ...)
 {
 	const char *s = format, *s1 = format;
-	int str_len = 0, i = 0;
+	int str_len = 0, i = 0, put_separator = 1;
 
 	va_list list;
 
 	va_start(list, format);
 
-	while (*s && s != NULL)
+	while (*s)
 	{
 		str_len++;
 		s++;
@@ -56,10 +56,13 @@ void print_all(const char * const format, ...)
 		case 'f':
 			printf("%f", va_arg(list, double));
 			break;
+		default:
+			put_separator = 0;
 		}
 
-		if (i < str_len - 1)
+		if (i < str_len - 1 && put_separator)
 			printf(", ");
+		put_separator = 1;
 		i++;
 		s1++;
 	}

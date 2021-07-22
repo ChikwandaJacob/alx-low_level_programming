@@ -17,23 +17,22 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	va_list list;
 
-        /*Initializing List*/
-        va_start(list, n);
+	va_start(list, n);
 
-        for ( ; i < n; i++)
-        {
-	        str = va_arg(list, char *);
+	for ( ; i < n; i++)
+	{
+		str = va_arg(list, char *);
 
-	        if (str == NULL)
-		        printf("nill");
-	        else
-	        {
-		        printf("%s", str);
-		        if (sep != NULL && i < n - 1)
-			        printf("%s", sep);
-	        }
-        }
+		if (str == NULL)
+			printf("nil");
+		else
+		{
+			printf("%s", str);
+			if (sep != NULL && i < n - 1)
+				printf("%s", sep);
+		}
+	}
 
 	printf("\n");
-        va_end(list);
+	va_end(list);
 }

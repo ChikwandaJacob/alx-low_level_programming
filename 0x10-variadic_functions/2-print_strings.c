@@ -31,7 +31,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	va_list list;
 
-	if (n)
+	if (n != 0)
 	{
 		/*Initializing List*/
 		va_start(list, n);
@@ -44,6 +44,8 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			{
 				if (s != NULL)
 					printf("%s%s", str, s);
+				else
+					printf("%s", str);
 			}
 		}
 

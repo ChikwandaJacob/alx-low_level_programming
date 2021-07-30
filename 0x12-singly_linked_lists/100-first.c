@@ -7,6 +7,8 @@
  */
 void __attribute__ ((constructor)) premain()
 {
-	printf("You're beat! and yet, you must allow,\n");
-	printf("I bore my house uponmy back!\n");
+	char *str = "You're beat! and yet, you must allow,\n";
+	char *str2 = "I bore my house uponmy back!\n";
+
+	printf("%s%s", str, str2);
 }

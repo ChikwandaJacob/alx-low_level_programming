@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * print_list - prints all the elements of a list_t list.
+ * list_len - prints all the elements of a list_t list.
  * @h: head structure
  *
  * Return: total number of nodes in a list.

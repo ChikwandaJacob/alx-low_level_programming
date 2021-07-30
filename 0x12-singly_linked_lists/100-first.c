@@ -7,7 +7,6 @@
  */
 void __attribute__ ((constructor)) premain()
 {
-        printf("You're beat! and yet, \t"
-	       "you must allow,\nI bore \t"
-	       "my house uponmy back!\n");
+	printf("You're beat! and yet, you must allow,\n"
+	       "I bore my house uponmy back!\n");
 }

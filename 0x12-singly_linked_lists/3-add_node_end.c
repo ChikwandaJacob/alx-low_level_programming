@@ -30,35 +30,28 @@ int get_Name_Len(const char *str)
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *temp, *last;
+	list_t *new_node, *last;
 
-	if (!*head)
+	last = *head;
+	new_node = malloc(sizeof(list_t));
+
+	if (!new_node)
+		return (NULL);
+
+	new_node->str = strdup(str);
+	new_node->len = get_Name_Len(str);
+	new_node->next = NULL;
+
+	if (*head == NULL)
 	{
-		*head = malloc(sizeof(list_t));
-
-		if (!*head)
-			return (NULL);
-
-		(*head)->str = strdup(str);
-		(*head)->len = get_Name_Len(str);
-		(*head)->next = NULL;
+		*head = new_node;
+		return (*head);
 	}
-	else
-	{
-		last = *head;
-		temp = malloc(sizeof(list_t));
 
-		if (!temp)
-			return (NULL);
+	while (last->next != NULL)
+		last = last->next;
 
-		temp->str = strdup(str);
-		temp->next = NULL;
-		temp->len = get_Name_Len(str);
+	last->next = new_node;
 
-		while (last->next != NULL)
-			last = last->next;
-
-		last->next = temp;
-	}
 	return (last);
 }

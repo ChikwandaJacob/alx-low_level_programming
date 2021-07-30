@@ -23,7 +23,7 @@ int get_Name_Len(const char *str)
 
 /**
  * add_node - adds a new node at the beginning of a list_t list.
- * @h: head structure
+ * @head: head structure
  * @str: value for node
  *
  * Return: total number of nodes in a list.
@@ -34,7 +34,7 @@ list_t *add_node(list_t **head, const char *str)
 
 	if (!*head)
 	{
-	        *head = malloc(sizeof(list_t));
+		*head = malloc(sizeof(list_t));
 
 		if (!*head)
 			return (NULL);
@@ -55,6 +55,5 @@ list_t *add_node(list_t **head, const char *str)
 		temp->len = get_Name_Len(str);
 		(*head) = temp;
 	}
-
-        return (*head);
+	return (*head);
 }

@@ -11,15 +11,15 @@ void free_listint2(listint_t **head)
 {
 	listint_t *current = *head, *next;
 
-	if (!head)
-		return;
-
-	while (current)
+	if (*head)
 	{
-		next = current->next;
-		free(current);
-		current = next;
-	}
+		while (current)
+		{
+			next = current->next;
+			free(current);
+			current = next;
+		}
 
-	*head = NULL;
+		*head = NULL;
+	}
 }

@@ -30,14 +30,17 @@ unsigned long int get_bit_length(unsigned long int num)
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int init_length = get_bit_length(*n), final_length;
+	unsigned long int init_len = get_bit_length(*n), fin_len, temp = *n;
 
 	*n = *n | (1 << index);
 
-	final_length = get_bit_length(*n);
+	fin_len = get_bit_length(*n);
 
-	if (final_length != init_length)
+	if (fin_len != init_len && temp != 0)
+	{
+		*n = temp;
 		return (-1);
+	}
 
 	return (1);
 }

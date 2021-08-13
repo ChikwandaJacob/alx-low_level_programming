@@ -15,7 +15,8 @@
  */
 int main(int argc, char **argv)
 {
-	ssize_t fd = open(argv[1], O_RDONLY), bytes_read;
+	ssize_t in_fd = open(argv[1], O_RDONLY), bytes_read;
+	ssize_t out_fd = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0644);
 
 	char buf[1024];
 
@@ -25,32 +26,27 @@ int main(int argc, char **argv)
 		exit(97);
 	}
 
-	bytes_read = read(fd, buf, 1024);
-
-	if (fd == -1 || bytes_read == -1)
+	if (in_fd == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n",
 			argv[1]);
 		exit(98);
 	}
 
-	if (close(fd) == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %li\n", fd);
-		exit(100);
-	}
-
-	fd = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-
-	if (fd == -1 || write(fd, buf, bytes_read) == -1)
+	if (out_fd == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 
-	if (close(fd) == -1)
+	do {
+		bytes_read = read(in_fd, buf, 1024);
+		write(out_fd, buf, bytes_read);
+	} while (bytes_read);
+
+	if (close(out_fd) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %li\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %li\n", out_fd);
 		exit(100);
 	}
 

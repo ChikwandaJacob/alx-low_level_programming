@@ -12,9 +12,9 @@
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
-        ssize_t fd = open(filename, O_WRONLY | O_APPEND), index = 0;
+	ssize_t fd = open(filename, O_WRONLY | O_APPEND), index = 0;
 
-        if (!filename || fd == -1)
+	if (!filename || fd == -1)
 		return (-1);
 
 	for ( ; text_content[index] != '\0'; index++)

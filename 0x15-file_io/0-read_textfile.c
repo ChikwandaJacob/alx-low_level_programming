@@ -26,7 +26,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (fd == -1 || !buf)
 		return (0);
 
-	bytes_read = read(STDERR_FILENO + STDOUT_FILENO, buf, letters);
+	bytes_read = read(fd, buf, letters);
 
 	close(fd);
 

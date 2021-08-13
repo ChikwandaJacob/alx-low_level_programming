@@ -22,7 +22,8 @@ int append_text_to_file(const char *filename, char *text_content)
 
 	if (index != 0)
 	{
-		write(fd, text_content, index);
+		if (write(fd, text_content, index) == -1)
+			return (-1);
 		return (1);
 	}
 

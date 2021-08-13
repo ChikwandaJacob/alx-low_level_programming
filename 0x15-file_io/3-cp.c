@@ -29,21 +29,22 @@ int main(int argc, char **argv)
 
 	if (fd == -1 || bytes_read == -1)
 	{
-		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n",
+			argv[1]);
 		exit(98);
 	}
 
-	fd = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	fd = open(argv[2], O_WRONLY | O_RDONLY | O_TRUNC, 0664);
 
 	if (fd == -1 || write(fd, buf, bytes_read) == -1)
 	{
-		dprintf(2, "Error: Can't write to %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[1]);
 		exit(99);
 	}
 
 	if (close(fd) == -1)
 	{
-		dprintf(2, "Error: Can't close fd %li\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %li\n", fd);
 		exit(100);
 	}
 

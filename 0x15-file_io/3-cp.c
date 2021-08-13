@@ -40,7 +40,7 @@ int main(int argc, char **argv)
 		exit(100);
 	}
 
-	fd = open(argv[2], O_WRONLY | O_RDONLY | O_TRUNC, 0664);
+	fd = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 
 	if (fd == -1 || write(fd, buf, bytes_read) == -1)
 	{

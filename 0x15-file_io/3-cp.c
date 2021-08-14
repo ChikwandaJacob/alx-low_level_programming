@@ -5,6 +5,38 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 
+/**
+ * test_in_file - tests argv[1] file
+ * @val: value of the file
+ * @filename: name of the file
+ *
+ * Return: nothing
+ */
+void test_in_file(ssize_t val, char *filename)
+{
+	if (val == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n",
+			filename);
+		exit(98);
+	}
+}
+
+/**
+ * test_out_file - tests argv[2] file
+ * @val: value of the file
+ * @filename: name of the file
+ *
+ * Return: nothing
+ */
+void test_out_file(ssize_t val, char *filename)
+{
+	if (val == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
+		exit(99);
+	}
+}
 
 /**
  * main - main function of the file
@@ -15,7 +47,7 @@
  */
 int main(int argc, char **argv)
 {
-	ssize_t in_fd = open(argv[1], O_RDONLY), bytes_read;
+	ssize_t in_fd = open(argv[1], O_RDONLY), bytes_read, bytes_written;
 	ssize_t out_fd = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0644);
 
 	char buf[1024];
@@ -26,22 +58,15 @@ int main(int argc, char **argv)
 		exit(97);
 	}
 
-	if (in_fd == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n",
-			argv[1]);
-		exit(98);
-	}
-
-	if (out_fd == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		exit(99);
-	}
+	test_in_file(in_fd, argv[1]);
+	test_out_file(out_fd, argv[2]);
 
 	do {
 		bytes_read = read(in_fd, buf, 1024);
-		write(out_fd, buf, bytes_read);
+		bytes_written = write(out_fd, buf, bytes_read);
+
+		test_in_file(bytes_read, argv[1]);
+		test_out_file(bytes_written, argv[2]);
 	} while (bytes_read);
 
 	if (close(out_fd) == -1)

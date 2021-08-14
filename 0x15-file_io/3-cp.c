@@ -39,6 +39,21 @@ void test_out_file(ssize_t val, char *filename)
 }
 
 /**
+ * test_file_descriptor - tests fd of file
+ * @fd_val: value of fd
+ *
+ * Return: nothing
+ */
+void test_file_descriptor(ssize_t fd_val)
+{
+	if (close(fd_val) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %li\n", fd_val);
+		exit(100);
+	}
+}
+
+/**
  * main - main function of the file
  * @argc: number of command line arguments
  * @argv: string values of command line arguments
@@ -69,11 +84,8 @@ int main(int argc, char **argv)
 		test_out_file(bytes_written, argv[2]);
 	} while (bytes_read);
 
-	if (close(out_fd) == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %li\n", out_fd);
-		exit(100);
-	}
+	test_file_descriptor(in_fd);
+	test_file_descriptor(out_fd);
 
 	return (0);
 }

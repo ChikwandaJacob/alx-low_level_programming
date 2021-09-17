@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdio.h>
 
 /**
  * get_dnodeint_at_index - returns a node at nth position
@@ -14,17 +15,14 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 	if (!head)
 		return (NULL);
 
-	if (index == position)
-		return (head);
-
-	while (head->next && (position != index))
+	while (head)
 	{
+		if (position == index)
+			return (head);
+
 		head = head->next;
 		position++;
 	}
 
-	if (!head)
-		return (NULL);
-
-	return (head);
+	return (NULL);
 }

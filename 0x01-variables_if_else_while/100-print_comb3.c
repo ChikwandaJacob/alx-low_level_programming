@@ -11,7 +11,7 @@ int main(void)
 
 	for ( ; min <= max; min++)
 	{
-	        for (index = 1 + min; index <= max + 1; index++)
+		for (index = 1 + min; index <= max + 1; index++)
 		{
 			putchar(min + '0');
 			putchar(index + '0');

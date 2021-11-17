@@ -50,6 +50,7 @@ int main(void)
 		start++;
 		end = start + 1;
 	}
+	putchar('\n');
 
 	return (0);
 }

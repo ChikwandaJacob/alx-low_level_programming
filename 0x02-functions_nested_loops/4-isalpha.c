@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
  * _isalpha - determines whether a chracter is part of the alphabet
@@ -9,16 +9,7 @@
  */
 int _isalpha(int c)
 {
-char sletter, bletter;
-int is_alpha = 0;
-for (sletter = 'a'; sletter <= 'z'; sletter++)
-if (sletter == c)
-is_alpha = 1;
-for (bletter = 'A'; bletter <= 'Z'; bletter++)
-if (bletter == c)
-is_alpha = 1;
-if (is_alpha == 1)
-return (1);
-else
-return (0);
+	if (c >= 65 && c <= 122)
+		return (1);
+        return (0);
 }

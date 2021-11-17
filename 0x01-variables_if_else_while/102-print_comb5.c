@@ -31,12 +31,12 @@ int main(void)
 	{
 		while (end <= 99)
 		{
-			if (start < 9)
+			if (start <= 9)
 				putchar('0');
 			printNum(start);
 			putchar(' ');
 
-			if (end < 9)
+			if (end <= 9)
 				putchar('0');
 			printNum(end);
 

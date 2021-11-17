@@ -25,7 +25,7 @@ void printNum(int num)
 int main(void)
 {
 	/* Initializing some varibles */
-	int start = 0, end = 0;
+	int start = 0, end = 1;
 
 	while (start <= 98)
 	{

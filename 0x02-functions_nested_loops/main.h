@@ -39,7 +39,7 @@ void times_table(void);
  *
  * Return: returns last value
  */
-int print_last_digit(int n);
+int print_last_digit(long int n);
 
 /**
  * _abs - computes the absolute value of a given number

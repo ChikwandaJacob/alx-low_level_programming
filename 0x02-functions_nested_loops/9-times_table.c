@@ -1,5 +1,21 @@
-#include "holberton.h"
-#include <stdio.h>
+#include "main.h"
+
+/**
+ * printNum - prints a number with _putchar
+ *
+ * @n: number to be printed
+ * Return: nothing
+ */
+void printNum(int n)
+{
+	if (n > 9)
+	{
+		printNum(n / 10);
+		n = n % 10;
+	}
+	_putchar(n + '0');
+}
+
 /**
  * times_table - computes absolute value of a number
  * @void : is the number to be determined.
@@ -9,20 +25,29 @@
 
 void times_table(void)
 {
-int i, j;
-for (i = 0; i < 10; i++)
-{
-for (j = 0; j < 10; j++)
-{
-int answer = i * j;
-printf("%d", answer);
-if (j < 9)
-{
-printf(", ");
-if (answer < 10)
-putchar(' ');
-}
-}
-putchar('\n');
-}
+	int i = 0, j = 0, product;
+
+	while (i <= 9)
+	{
+		for (j = 0; j <= 9; j++)
+		{
+			product = i * j;
+			printNum(product);
+
+			if (j < 9)
+			{
+				_putchar(',');
+
+				if (product <= 9)
+				{
+					_putchar(' ');
+					_putchar(' ');
+				}
+				else
+					_putchar(' ');
+			}
+		}
+		_putchar('\n');
+		i++;
+	}
 }

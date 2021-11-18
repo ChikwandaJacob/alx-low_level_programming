@@ -29,11 +29,11 @@ void times_table(void)
 
 	while (i <= 9)
 	{
-		for (j = 0; j < 9; j++)
+		for (j = 0; j <= 9; j++)
 		{
 			product = i * j;
 
-		        if (j < 8)
+			if (j < 9)
 			{
 				printNum(product);
 				_putchar(',');
@@ -47,7 +47,7 @@ void times_table(void)
 					_putchar(' ');
 			}
 
-			if (j == 8)
+			if (j == 9)
 				printNum(product);
 		}
 

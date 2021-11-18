@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+void print_times_table(int n);
 /**
  * jack_buar - gets last value of a given number
  * @void : first number

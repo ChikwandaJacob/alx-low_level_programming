@@ -25,20 +25,21 @@ void printNum(int n)
 
 void times_table(void)
 {
-	int i = 0, j = 0, product;
+	int i = 0, j = 0, product, future_product;
 
 	while (i <= 9)
 	{
 		for (j = 0; j <= 9; j++)
 		{
 			product = i * j;
+			future_product = i * (j + 1);
 
 			if (j < 9)
 			{
 				printNum(product);
 				_putchar(',');
 
-				if (product <= 9)
+				if (future_product <= 9)
 				{
 					_putchar(' ');
 					_putchar(' ');

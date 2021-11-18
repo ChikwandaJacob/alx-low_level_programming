@@ -32,21 +32,25 @@ void times_table(void)
 		for (j = 0; j <= 9; j++)
 		{
 			product = i * j;
-			printNum(product);
 
-			if (j < 9)
+		        if (j < 9)
 			{
+				printNum(product);
 				_putchar(',');
-
-				if (product <= 9)
-				{
-					_putchar(' ');
-					_putchar(' ');
-				}
-				else
-					_putchar(' ');
 			}
+
+			if (product <= 9)
+			{
+				_putchar(' ');
+				_putchar(' ');
+			}
+			else
+				_putchar(' ');
+
+			if (j == 9)
+				printNum(product);
 		}
+
 		_putchar('\n');
 		i++;
 	}

@@ -8,7 +8,7 @@
  */
 void printFib(int range)
 {
-	static long int first = 0, second = 1, sum, total = 0;
+	static long int first = 0, second = 1, total = 0, sum;
 
 	if (range != 0)
 	{
@@ -19,7 +19,7 @@ void printFib(int range)
 		if ((sum < 4000000) && (sum % 2 == 0))
 			total += sum;
 
-	        printFib(range - 1);
+		printFib(range - 1);
 	}
 	else
 	{

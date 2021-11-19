@@ -10,7 +10,7 @@ void printTotalEvenFibValues(int range)
 {
 	static long int first = 0, second = 1, total = 0, sum, i;
 
-	for (i = 1; i <= 50; i++)
+	for (i = 1; i <= range; i++)
 	{
 		sum = first + second;
 		first = second;

@@ -18,7 +18,7 @@ int main(void)
 
 		if (mul_3 < 1024)
 			sum += mul_3;
-		if (mul_5 < 10)
+		if (mul_5 < 1024)
 			sum += mul_5;
 	}
 

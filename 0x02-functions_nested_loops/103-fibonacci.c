@@ -29,7 +29,7 @@ void printFib(int range)
 }
 
 /**
- * main - prints the first 50 Fibonacci numbers starting with 1 and 2
+ * main - finds and prints the sum of the even-valued terms of fibonachi
  *
  * Return: 0 on success
  */

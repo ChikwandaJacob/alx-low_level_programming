@@ -10,7 +10,7 @@ void printFib(int range)
 {
 	static long int first = 0, second = 1, sum;
 
-	if (range > 1)
+	if (range != 0)
 	{
 		sum = first + second;
 		first = second;
@@ -18,7 +18,7 @@ void printFib(int range)
 
 		printf("%ld", sum);
 
-		if (range > 2)
+		if (range > 1)
 			printf(", ");
 
 		printFib(range - 1);

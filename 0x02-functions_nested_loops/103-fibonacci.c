@@ -1,16 +1,16 @@
 #include <stdio.h>
 
 /**
- * printFib - prints the fibonachi sequence
+ * printTotalEvenFibValues - prints the total numbers in fibonachi sequence
  *
  * @range: fibonachi length
  * Return: nothing
  */
-void printFib(int range)
+void printTotalEvenFibValues(int range)
 {
-	static long int first = 0, second = 1, total = 0, sum;
+	static long int first = 0, second = 1, total = 0, sum, i;
 
-	if (range != 0)
+	for (i = 1; i <= 50; i++)
 	{
 		sum = first + second;
 		first = second;
@@ -18,14 +18,9 @@ void printFib(int range)
 
 		if ((sum < 4000000) && (sum % 2 == 0))
 			total += sum;
+	}
 
-		printFib(range - 1);
-	}
-	else
-	{
-		printf("%ld", total);
-		printf("\n");
-	}
+	printf("%ld\n", total);
 }
 
 /**
@@ -35,7 +30,7 @@ void printFib(int range)
  */
 int main(void)
 {
-	printFib(50);
+	printTotalEvenFibValues(50);
 
 	return (0);
 }

@@ -6,7 +6,7 @@
  * @range: fibonachi length
  * Return: nothing
  */
-void printFib(int range)
+void printFib(unsigned long int range)
 {
 	static unsigned long int first = 0, second = 1, sum, i;
 
